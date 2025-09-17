@@ -1,0 +1,56 @@
+Capstone project 2:
+
+Develop a python module to create a class representing a shopping cart. Include methods for adding, removing and calculating total price.
+ class ecommerce:
+     #initialise the ecommerce with an empty list of items
+     def __init__(self):
+          self.items = []
+     #Add an item with a name and quantity to the ecommerce
+     def addItem(self,itemName,qty):
+          item = (itemName,qty)
+          self.items.append(item)
+     #Remove an item with a specific name from the ecommerce
+     def removeItem(self,itemName):
+          for item in self.items:
+               if item[0] == itemName:
+                    self.items.remove(item)
+                    break
+     #Calculate and return the total price of items in ecommerce
+     def calculateTotal(self):
+          total = 0
+          for item in self.items:
+               total += item[1]
+          return total
+#Example Usage
+#Create an instance of ecommerce class
+obj1 = ecommerce()
+#Add items to the ecommerce class
+obj1.addItem("Papaya",100)
+obj1.addItem("Guava",200)
+obj1.addItem("Orange",150)
+#Display the current item and calculate total price
+print("Current items in cart: ")
+for item in obj1.items:
+     print(item[0], "=", item[1])
+total = obj1.calculateTotal()
+print("Total price is: ",total)
+#Remove the item in ecommerce
+obj1.removeItem("Guava")
+print("\n Updated items in ecommerce after removing Guava: ")
+for item in obj1.items:
+     print(item[0],"-",item[1])
+total2 = obj1.calculateTotal()
+print("Total Price: ",total2)
+
+
+Output:
+Current items in cart: 
+Papaya = 100
+Guava = 200
+Orange = 150
+Total price is:  450
+
+ Updated items in ecommerce after removing Guava: 
+Papaya - 100
+Orange - 150
+Total Price:  250

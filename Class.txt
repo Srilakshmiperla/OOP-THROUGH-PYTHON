@@ -1,0 +1,39 @@
+1.Creation of class and Object
+
+class cse:
+#class attributes
+  name = ""
+  rno = ""
+#object creation to the class
+c1 = cse()
+c1.name = "ABC"
+c1.rno = "99"
+c2 = cse()
+c2.name = "XYZ"
+c2.rno = "A0"
+c3 = cse()
+c3.name = "PQR"
+c3.rno = "A1"
+c4 = cse()
+c4.name = "DEF"
+c4.rno = "A2"
+#Display object
+print(c1.name)
+print(c1.rno)
+print(c2.name)
+print(c2.rno)
+print(c3.name)
+print(c3.rno)
+print(c4.name)
+print(c4.rno)
+
+
+Output:
+ABC
+99
+XYZ
+A0
+PQR
+A1
+DEF
+A2
