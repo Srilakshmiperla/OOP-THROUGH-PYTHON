@@ -1,0 +1,42 @@
+To stimulate basic operations such as depositing and withdrawing money. The key focus will be on creating a BankAccount class that allows users to : 
+.Deposit money into their account
+.Withdraw money from their account (Only if sufficient balance is avaliable)
+.Display the current balance
+ 
+
+class RBI:
+     def __init__(self):
+          self.balance = 0
+          print("Welcome to the Reserve Bank of India")
+     def deposit(self):
+          amount = float(input("Enter amount to deposit :"))
+          self.balance += amount
+          print("\n Deposited amount is :",amount )
+     def withDraw(self):
+          amount = float(input("Enter amount to withdraw : "))
+          if self.balance >= amount:
+               self.balance -= amount
+               print("\n Withdrawn amount is : ",amount)
+          else:
+               print("\n Insufficient balance")
+     def checkBalance(self):
+          print("\n Current balance is : ",self.balance)
+          
+#Driver code
+obj = RBI()
+obj.deposit()
+obj.withDraw()
+obj.checkBalance()
+
+
+Output:
+
+Welcome to the Reserve Bank of India
+Enter amount to deposit :2000
+
+ Deposited amount is : 2000.0
+Enter amount to withdraw : 500
+
+ Withdrawn amount is :  500.0
+
+ Current balance is :  1500.0
