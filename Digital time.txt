@@ -1,0 +1,29 @@
+Python program to display date and time
+
+
+#Importing whole module
+from tkinter import *
+from tkinter.ttk import *
+
+#Importing strftime function to retrive system's time
+from time import strftime
+
+#Creating tkinter window
+root = Tk()
+root.title('CSE')
+
+#This function is used to display time on label
+def time():
+    string = strftime('%d/%m/%y, %H:%M:%S %p')
+    lbl.config(text = string)
+    lbl.after(1000,time)
+
+
+#Styling the label widget so that clock will look more attractive
+lbl = Label(root,font = ('Arial',40,'bold'),
+                  background = 'blue',
+                   foreground = 'white')
+
+#Placing clock at the centre of the tkinter window
+lbl.pack(anchor = 'center')
+time()
